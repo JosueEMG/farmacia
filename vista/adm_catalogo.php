@@ -1,13 +1,13 @@
 <?php
-    session_start();
-    if($_SESSION['us_tipo']==1){  
-      include_once 'layouts/header.php';     
+session_start();
+if ($_SESSION['us_tipo'] == 1) {
+  include_once 'layouts/header.php';
 ?>
 
   <title>Adm | Catalogo</title>
   <!-- Tell the browser to be responsive to screen width -->
   <?php
-    include_once'layouts/nav.php';
+  include_once 'layouts/nav.php';
   ?>
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
@@ -57,8 +57,8 @@
 
 
 <?php
-include_once 'layouts/footer.php';
-    }else{
-        header('Location: ../index.php');
-    }
+  include_once 'layouts/footer.php';
+} else {
+  header('Location: ../index.php');
+}
 ?>
