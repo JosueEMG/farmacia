@@ -8,10 +8,13 @@ if(!empty($_SESSION['us_tipo'])){
 
     switch ($_SESSION['us_tipo']) {
         case 1:
-            header('location: ../vista/adm_catalogo.php');
+            header('Location: ../vista/adm_catalogo.php');
             break;
         case 2:
-            header('location: ../vista/tec_catalogo.php');
+            header('Location: ../vista/tec_catalogo.php');
+            break;
+        case 3:
+            header('Location: ../vista/adm_catalogo.php');
             break;
     }
 }else{
@@ -29,7 +32,8 @@ if(!empty($usuario->objetos)){
         case 2:
             header('location: ../vista/tec_catalogo.php');
             break;
-        default:
+        case 3:
+            header('Location: ../vista/adm_catalogo.php');
             break;
     }
 }else{

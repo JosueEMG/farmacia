@@ -110,8 +110,8 @@
         let formData = new FormData($('#form-photo')[0]);
         $.ajax({
             url:'../controlador/UsuarioController.php',
-            type='POST',
-            data=formData,
+            type:'POST',
+            data:formData,
             cache:false,
             processData:false,
             contentType:false
