@@ -60,8 +60,7 @@ if ($_SESSION['us_tipo'] == 1) {
             <div class="container-fluid">
                 <div class="row mb-2">
                     <div class="col-sm-6">
-                        <h1>Gestion usuarios <button type="button" data-toggle="modal" data-target="#crearusuario" class="btn bg-gradient-primary ml-2">Crear usuario</button></h1>
-                        
+                        <h1>Gestion usuarios <button type="button" data-toggle="modal" data-target="#crearusuario" class="btn bg-gradient-primary ml-2">Crear usuario</button></h1>                
                     </div>
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
@@ -85,7 +84,9 @@ if ($_SESSION['us_tipo'] == 1) {
                         </div>
                     </div>
                     <div class="card-body">
+                        <div id="usuarios" class="row d-flex aling-items-stretch">
 
+                        </div>
                     </div>
                     <div class="card-footer">
 
@@ -101,4 +102,4 @@ if ($_SESSION['us_tipo'] == 1) {
     header('Location: ../index.php');
 }
 ?>
-<script src="../js/Usuario.js"></script>
+<script src="../js/Gestion_usuario.js"></script>
