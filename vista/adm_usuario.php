@@ -60,7 +60,8 @@ if ($_SESSION['us_tipo'] == 1 || $_SESSION['us_tipo'] == 3) {
             <div class="container-fluid">
                 <div class="row mb-2">
                     <div class="col-sm-6">
-                        <h1>Gestion usuarios <button type="button" data-toggle="modal" data-target="#crearusuario" class="btn bg-gradient-primary ml-2">Crear usuario</button></h1>                
+                        <h1>Gestion usuarios <button type="button" data-toggle="modal" data-target="#crearusuario" class="btn bg-gradient-primary ml-2">Crear usuario</button></h1>
+                        <input type="hidden" id="tipo_usuario" value="<?php echo $_SESSION['us_tipo']?>">                
                     </div>
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
