@@ -20,7 +20,7 @@
       <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
     </li>
     <li class="nav-item d-none d-sm-inline-block">
-      <a href="../../index3.html" class="nav-link">Home</a>
+      <a href="../vista/adm_catalogo.php" class="nav-link">Home</a>
     </li>
     <li class="nav-item d-none d-sm-inline-block">
       <a href="#" class="nav-link">Contact</a>
@@ -65,11 +65,19 @@
       <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
         
       <li class="nav-header">Usuario</li>
-                  <li class="nav-item">
-          <a href="../vista/editar_datos_personales.php" class="nav-link">
+        <li class="nav-item">
+          <a href="editar_datos_personales.php" class="nav-link">
             <i class="nav-icon fas fa-user-cog"></i>
             <p>
               Datos Personales
+            </p>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="adm_usuario.php" class="nav-link">
+            <i class="nav-icon fas fa-users"></i>
+            <p>
+              Gestion usuario
             </p>
           </a>
         </li>
