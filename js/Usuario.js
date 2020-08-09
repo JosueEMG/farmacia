@@ -37,10 +37,10 @@
             $('#correo_us').html(correo);
             $('#sexo_us').html(sexo);
             $('#adicional_us').html(adicional);
-            $('#avatar2').attr('scr',usuario.avatar);
-            $('#avatar1').attr('scr',usuario.avatar);
-            $('#avatar3').attr('scr',usuario.avatar);
-            $('#avatar4').attr('scr',usuario.avatar);
+            $('#avatar2').attr('src',usuario.avatar);
+            $('#avatar1').attr('src',usuario.avatar);
+            $('#avatar3').attr('src',usuario.avatar);
+            $('#avatar4').attr('src',usuario.avatar);
             
         })
     }
