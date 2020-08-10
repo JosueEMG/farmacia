@@ -30,12 +30,12 @@ if ($_SESSION['us_tipo'] == 1 || $_SESSION['us_tipo'] == 3) {
                             ?>
                         </b>
                     </div>
-                    <span>Necesitamos su password para continuar</span>
+                    <span>Necesitamos su contraseña para continuar</span>
                     <div class="alert alert-success text-center" id="confirmado" style='display:none;'>
                         <span><i class="fas fa-check m-1"></i>Se modifico al usuario</span>
                     </div>
                     <div class="alert alert-danger text-center" id="rechazado" style='display:none;'>
-                        <span><i class="fas fa-times m-1"></i>El password no es correcto</span>
+                        <span><i class="fas fa-times m-1"></i>La contraseña no es correcta</span>
                     </div>
                     <form id="form-confirmar">
                         <div class="input-group mb-3">

@@ -21,7 +21,15 @@
             apellidos+=`${usuario.apellidos}`;
             edad+=`${usuario.edad}`;
             dni+=`${usuario.dni}`;
-            tipo+=`${usuario.tipo}`;
+            if(usuario.tipo=='Root'){
+                tipo+=`<h1 class="badge badge-danger">${usuario.tipo}</h1>`;
+              }
+              if(usuario.tipo=='Administrador'){
+                tipo+=`<h1 class="badge badge-warning">${usuario.tipo}</h1>`;
+              }
+              if(usuario.tipo_usuario=='Tecnico'){
+                tipo+=`<h1 class="badge badge-info">${usuario.tipo}</h1>`;
+              }   
             telefono+=`${usuario.telefono}`;
             residencia+=`${usuario.residencia}`;
             correo+=`${usuario.correo}`;
