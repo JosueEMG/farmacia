@@ -136,7 +136,7 @@ if ($_SESSION['us_tipo'] == 1 || $_SESSION['us_tipo'] == 3) {
                                 <li class="nav-item"><a href="#presentacion" class="nav-link" data-toggle="tab">Presentacion</a></li>
                             </ul>
                         </div>
-                        <div class="card-body">
+                        <div class="card-body p-0">
                             <div class="tab-content">
                                 <div class="tab-pane active" id='laboratorio'>
                                     <div class="card card-success">
@@ -149,13 +149,14 @@ if ($_SESSION['us_tipo'] == 1 || $_SESSION['us_tipo'] == 3) {
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="card-body p-0">
-                                            <table class="table table-over text-nowrap">
+                                        <div class="card-body p-0 table-responsive">
+                                            <table class="table table-hover text-nowrap">
                                                 <thead class="table-success">
                                                     <tr>
-                                                        <th>Laboratorio</th>
-                                                        <th>Logo</th>
                                                         <th>Accion</th>
+                                                        <th>Logo</th>
+                                                        <th>Laboratorio</th>
+                                                        
                                                     </tr>
                                                 </thead> 
                                                 <tbody class="table-active" id="laboratorios">

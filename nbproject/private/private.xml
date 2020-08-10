@@ -5,7 +5,10 @@
         <group>
             <file>file:/C:/xampp/htdocs/farmacia/js/Gestion_usuario.js</file>
             <file>file:/C:/xampp/htdocs/farmacia/index.php</file>
+            <file>file:/C:/xampp/htdocs/farmacia/modelo/Laboratorio.php</file>
             <file>file:/C:/xampp/htdocs/farmacia/controlador/UsuarioController.php</file>
+            <file>file:/C:/xampp/htdocs/farmacia/js/Laboratorio.js</file>
+            <file>file:/C:/xampp/htdocs/farmacia/vista/adm_atributo.php</file>
             <file>file:/C:/xampp/htdocs/farmacia/modelo/Usuario.php</file>
             <file>file:/C:/xampp/htdocs/farmacia/vista/editar_datos_personales.php</file>
             <file>file:/C:/xampp/htdocs/farmacia/vista/adm_usuario.php</file>
