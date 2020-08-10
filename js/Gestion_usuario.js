@@ -45,12 +45,6 @@ $(document).ready(function(){
                     </button>
                     `;
                   }
-                  if(usuario.tipo_usuario!=3){
-                    template+=`<button class="btn btn-danger ml-1">
-                    <i class="fas fa-window-close mr-1"></i>Eliminar
-                    </button>
-                    `;
-                  }
                   if(usuario.tipo_usuario==1){
                     template+=`<button class="descender btn btn-secondary mr-1" type="button" data-toggle="modal" data-target="#confirmar">
                     <i class="fas fa-sort-amount-down mr-1"></i>Descender
@@ -65,6 +59,12 @@ $(document).ready(function(){
                     </button>
                     `;
                   }
+                }
+                if(usuario.tipo_usuario!=3){
+                  template+=`<button class="btn btn-danger ml-1">
+                  <i class="fas fa-window-close mr-1"></i>Eliminar
+                  </button>
+                  `;
                 }
                 template+=`
                   </div>
@@ -93,6 +93,7 @@ $(document).ready(function(){
       let pass = $('#pass').val();
       funcion='crear_usuario';
       $.post('../controlador/UsuarioController.php',{nombre,apellido,edad,dni,pass,funcion},(response)=>{
+        console.log(response);
         if(response=='add'){
           $('#add').hide('slow');
           $('#add').show(1000);
