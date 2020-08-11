@@ -264,3 +264,5 @@ if ($_SESSION['us_tipo'] == 1 || $_SESSION['us_tipo'] == 3) {
 }
 ?>
 <script src="../js/Laboratorio.js"></script>
+<script src="../js/Tipojs"></script>
+<script src="../js/Presentacion.js"></script>
