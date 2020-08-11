@@ -50,5 +50,21 @@ class Laboratorio{
             $query->execute(array(':id'=>$id,':nombre'=>$nombre));
         return $this->objetos;
     }
+    function borrar($id){
+        $sql="DELETE FROM laboratorio where id_laboratorio=:id";
+        $query = $this->acceso->prepare($sql);
+        $query->execute(array(':id'=>$id));
+        if(!empty($query->execute(array(':id'=>$id)))){
+            echo 'borrado';
+        }else {
+            echo 'no borrado';
+        }
+    }
+    function editar($nombre,$id_editado){
+        $sql="UPDATE laboratorio SET nombre=:nombre where id_laboratorio=:id";
+        $query = $this->acceso->prepare($sql);
+        $query->execute(array(':id'=>$id_editado,':nombre'=>$nombre));
+        echo 'edit';
+    }
 }
 ?>
