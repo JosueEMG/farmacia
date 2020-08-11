@@ -15,7 +15,7 @@ if($_POST['funcion']=='buscar'){
     $json=array();
     foreach ($tipo->objetos as $objeto) {
         $json[]=array(
-            'id'=>$objeto->id_tip_prod,
+            'id'=>$objeto->ip_tip_prod,
             'nombre'=>$objeto->nombre
         );
     }

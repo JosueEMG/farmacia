@@ -45,10 +45,10 @@ $(document).ready(function(){
                 template+=`
                     <tr tipId="${tipo.id}" tipNombre="${tipo.nombre}">
                         <td>
-                            <button class="editar-tip btn btn-success" title="Editar laboratorio" type="button" data-toggle="modal" data-target="#creartipo">
+                            <button class="editar-tip btn btn-success" title="Editar Tipo" type="button" data-toggle="modal" data-target="#creartipo">
                                 <i class="fas fa-pencil-alt"></i>
                             </button>
-                            <button class="borrar-tip btn btn-danger" title="Borrar laboratorio">
+                            <button class="borrar-tip btn btn-danger" title="Borrar Tipo">
                                 <i class="fas fa-trash-alt"></i>
                             </button>
                         </td>
@@ -125,7 +125,7 @@ $(document).ready(function(){
         const id = $(elemento).attr('tipId');
         const nombre = $(elemento).attr('tipNombre');
         $('#id_editar_tip').val(id);
-        $('#nombre-tip').val(nombre);
+        $('#nombre-tipo').val(nombre);
         edit=true;
     })
 });
