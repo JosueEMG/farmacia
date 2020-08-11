@@ -10,7 +10,6 @@ $(document).ready(function(){
         }else{
             funcion='editar';
         }
-        funcion='crear';
         $.post('../controlador/LaboratorioController.php',{nombre_laboratorio,id_editado,funcion},(response)=>{
             console.log(response);
             if(response=='add'){
@@ -27,9 +26,9 @@ $(document).ready(function(){
                 $('#form-crear-laboratorio').trigger('reset');
             }
             if(response=='edit'){
-                $('#add-laboratorio').hide('slow');
-                $('#add-laboratorio').show(1000);
-                $('#add-laboratorio').hide(2000);
+                $('#edit-lab').hide('slow');
+                $('#edit-lab').show(1000);
+                $('#edit-lab').hide(2000);
                 $('#form-crear-laboratorio').trigger('reset');
                 buscar_lab();
             }
@@ -49,7 +48,7 @@ $(document).ready(function(){
                             <button class="avatar btn btn-info" title="Cambiar logo de laboratorio" type="button" data-toggle="modal" data-target="#cambiologo">
                                 <i class="far fa-image"></i>
                             </button>
-                            <button class="editar btn btn-success" title="Editar laboratorio type="button" data-toggle="modal" data-target="#crearlaboratorio">
+                            <button class="editar btn btn-success" title="Editar laboratorio" type="button" data-toggle="modal" data-target="#crearlaboratorio">
                                 <i class="fas fa-pencil-alt"></i>
                             </button>
                             <button class="borrar btn btn-danger" title="Borrar laboratorio">
@@ -143,7 +142,7 @@ $(document).ready(function(){
           }).then((result) => {
             if (result.value) {
                 $.post('../controlador/LaboratorioController.php',{id,funcion},(response)=>{
-                    edit==false
+                    edit==false;
                     if(response=='borrado'){
                         swalWithBootstrapButtons.fire(
                             'Borrado!',
@@ -172,7 +171,7 @@ $(document).ready(function(){
     $(document).on('click', '.editar', (e)=>{
         const elemento = $(this)[0].activeElement.parentElement.parentElement;
         const id = $(elemento).attr('labId');
-        const nombre = $(elemento).attr('labNombre');;
+        const nombre = $(elemento).attr('labNombre');
         $('#id_editar_lab').val(id);
         $('#nombre-laboratorio').val(nombre);
         edit=true;

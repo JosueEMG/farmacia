@@ -8,7 +8,7 @@ if($_POST['funcion']=='crear'){
 }
 if($_POST['funcion']=='editar'){
     $nombre = $_POST['nombre_laboratorio'];
-    $id_editado=$_POST['id_editado']
+    $id_editado=$_POST['id_editado'];
     $laboratorio->editar($nombre,$id_editado);
 }
 if($_POST['funcion']=='buscar'){
