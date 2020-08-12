@@ -19,8 +19,7 @@ class Producto{
             $query = $this->acceso->prepare($sql);
             $query->execute(array(':nombre'=>$nombre, ':concentracion'=>$concentracion, ':adicional'=>$adicional, ':laboratorio'=>$laboratorio, ':tipo'=>$tipo, ':presentacion'=>$presentacion, ':precio'=>$precio, ':avatar'=>$avatar));
             echo 'add';
-        }
-        
+        }        
     }
     function buscar(){
         if(!empty($_POST['consulta'])){
@@ -40,7 +39,7 @@ class Producto{
             FROM producto 
             JOIN laboratorio on prod_lab=id_laboratorio
             JOIN tipo_producto on prod_tip_prod=ip_tip_prod
-            JOIN presentacion on prod_present=id_presentacion and producto.nombre NOT LIKE '' LIMIT 25";
+            JOIN presentacion on prod_present=id_presentacion and producto.nombre NOT LIKE '' order by producto.nombre LIMIT 25";
             $query = $this->acceso->prepare($sql);
             $query->execute();
             $this->objetos=$query->fetchall();
