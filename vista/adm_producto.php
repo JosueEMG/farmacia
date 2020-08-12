@@ -26,7 +26,7 @@ if ($_SESSION['us_tipo'] == 1 || $_SESSION['us_tipo'] == 3) {
                             <span><i class="fas fa-check m-1"></i>Se agregó correctamente</span>
                         </div>
                         <div class="alert alert-danger text-center" id="noadd" style='display:none;'>
-                            <span><i class="fas fa-times m-1"></i>El producto ya existe en otro usuario</span>
+                            <span><i class="fas fa-times m-1"></i>El producto ya existe</span>
                         </div>
                         <form id="form-crear-producto">
                             <div class="form-group">
@@ -39,7 +39,7 @@ if ($_SESSION['us_tipo'] == 1 || $_SESSION['us_tipo'] == 3) {
                             </div>
                             <div class="form-group">
                                 <label for="adicional">Adicional</label>
-                                <input id="adicional" type="number" class="form-control" placeholder="Ingrese adicional">
+                                <input id="adicional" type="text" class="form-control" placeholder="Ingrese adicional">
                             </div>
                             <div class="form-group">
                                 <label for="precio">Precio</label>
