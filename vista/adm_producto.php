@@ -9,6 +9,7 @@ if ($_SESSION['us_tipo'] == 1 || $_SESSION['us_tipo'] == 3) {
     <?php
     include_once 'layouts/nav.php';
     ?>
+    
     <!-- Button trigger modal -->
     <div class="modal fade" id="cambiologo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
@@ -28,7 +29,7 @@ if ($_SESSION['us_tipo'] == 1 || $_SESSION['us_tipo'] == 3) {
                         </b>
                     </div>
                     <div class="alert alert-success text-center" id="edit" style='display:none;'>
-                        <span><i class="fas fa-check m-1"></i>El logo de edito</span>
+                        <span><i class="fas fa-check m-1"></i>El logo se editó</span>
                     </div>
                     <div class="alert alert-danger text-center" id="noedit" style='display:none;'>
                         <span><i class="fas fa-times m-1"></i>formato no soportado</span>
@@ -67,6 +68,9 @@ if ($_SESSION['us_tipo'] == 1 || $_SESSION['us_tipo'] == 3) {
                         <div class="alert alert-danger text-center" id="noadd" style='display:none;'>
                             <span><i class="fas fa-times m-1"></i>El producto ya existe</span>
                         </div>
+                        <div class="alert alert-success text-center" id="edit_prod" style='display:none;'>
+                            <span><i class="fas fa-times m-1"></i>Se editó correctamente</span>
+                        </div>
                         <form id="form-crear-producto">
                             <div class="form-group">
                                 <label for="nombre_producto">Nombre</label>
@@ -96,6 +100,7 @@ if ($_SESSION['us_tipo'] == 1 || $_SESSION['us_tipo'] == 3) {
                                 <label for="presentacion">Presentacion</label>
                                 <select name="presentacion" id="presentacion" class="form-control select2" style="width:100%"></select>
                             </div>
+                            <input type="hidden" id="id_edit_prod">
                         
                     </div>
                     <div class="card-footer">
