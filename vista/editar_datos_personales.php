@@ -51,7 +51,7 @@ if ($_SESSION['us_tipo'] == 1 || $_SESSION['us_tipo'] == 3) {
                             </div>
                             <input id="newpass" type="text" class="form-control" placeholder="Ingrese password nueva">
                         </div>
-                </div>
+            </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Cerrar</button>
                     <button type="submit" class="btn bg-gradient-primary">Guardar</button>
@@ -96,7 +96,7 @@ if ($_SESSION['us_tipo'] == 1 || $_SESSION['us_tipo'] == 3) {
                     <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Cerrar</button>
                     <button type="submit" class="btn bg-gradient-primary">Guardar</button>
                 </div>
-                </form>
+                    </form>
             </div>
         </div>
     </div>
