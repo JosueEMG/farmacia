@@ -97,7 +97,7 @@
         funcion='cambiar_contra';
         $.post('../controlador/UsuarioController.php',{id_usuario, funcion, oldpass, newpass}, (response)=>{
             console.log(response);
-            if(response=='update'){
+            if(response='update'){
                 $('#update').hide('slow');
                 $('#update').show(1000);
                 $('#update').hide(2000);
