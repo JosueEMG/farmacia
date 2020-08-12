@@ -102,7 +102,7 @@ $(document).ready(function(){
                 </div>
                 <div class="card-footer">
                   <div class="text-right">
-                    <button class="avatar btn btn-sm bg-teal">
+                    <button class="avatar btn btn-sm bg-teal" type="button" data-toggle-"modal" data-target-"#cambiologo">
                       <i class="fas fa-image"></i>
                     </button>
                     <button class="editar btn btn-sm btn-succes">
