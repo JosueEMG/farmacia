@@ -9,7 +9,7 @@ if($_POST['funcion']=='crear'){
     $laboratorio = $_POST['laboratorio'];
     $tipo = $_POST['tipo'];
     $presentacion = $_POST['presentacion'];
-    $avatar = 'prod_default.jpg';
+    $avatar = 'prod_default.png';
     $producto->crear($nombre,$concentracion,$adicional,$precio,$laboratorio,$tipo,$presentacion,$avatar);
 }
 if($_POST['funcion']=='editar'){
