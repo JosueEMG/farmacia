@@ -1,4 +1,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- select2 -->
+<link rel="stylesheet" href="../css/select2.css">
 <!-- sweetalert2 -->
 <link rel="stylesheet" href="../css/sweetalert2.css">
 <!-- Font Awesome -->
@@ -84,7 +86,15 @@
         </li>
         
         <li class="nav-header">Almacen</li>
-          <li class="nav-item">
+        <li class="nav-item">
+          <a href="adm_producto.php" class="nav-link">
+            <i class="nav-icon fas fa-pills"></i>
+            <p>
+              Gestion Producto
+            </p>
+          </a>
+        </li>
+        <li class="nav-item">
           <a href="adm_atributo.php" class="nav-link">
             <i class="nav-icon fas fa-vials"></i>
             <p>
