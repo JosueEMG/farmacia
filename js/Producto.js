@@ -155,7 +155,7 @@ $(document).ready(function(){
     $(document).on('click','.avatar',(e)=>{
       funcion="cambiar_avatar";
       const elemento =$(this)[0].activeElement.parentElement.parentElement.parentElement.parentElement;
-      const id= $(elemento).attr('proId');
+      const id= $(elemento).attr('prodId');
       const avatar=$(elemento).attr('prodAvatar');
       const nombre=$(elemento).attr('prodNombre');
       $('#funcion').val(funcion);
@@ -194,7 +194,7 @@ $(document).ready(function(){
     });
     $(document).on('click','.editar',(e)=>{
       const elemento =$(this)[0].activeElement.parentElement.parentElement.parentElement.parentElement;
-      const id= $(elemento).attr('proId');
+      const id= $(elemento).attr('prodId');
       const nombre=$(elemento).attr('prodNombre');
       const concentracion=$(elemento).attr('prodConcentracion');
       const adicional=$(elemento).attr('prodAdicional');
