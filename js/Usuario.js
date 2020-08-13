@@ -59,8 +59,7 @@
             const usuario=JSON.parse(response);
             $('#telefono').val(usuario.telefono);
             $('#residencia').val(usuario.residencia);
-            $('#correo').val(usuario.correo);
-            $('#sexo').val(usuario.sexo);
+            $('#correo').val(usuario.correo);            $('#sexo').val(usuario.sexo);
             $('#adicional').val(usuario.adicional);
         })
     });
