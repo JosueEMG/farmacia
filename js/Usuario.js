@@ -65,7 +65,7 @@
         })
     });
     $('#form-usuario').submit(e=>{
-        if(edit==true){
+        if(edit===true){
             let telefono=$('#telefono').val();
             let residencia=$('#residencia').val();
             let correo=$('#correo').val();
@@ -78,6 +78,7 @@
                     $('#editado').show(1000);
                     $('#editado').hide(2000);
                     $('#form-usuario').trigger('reset');
+                    buscar_usuario();
                 }
                 edit=false;
                 buscar_usuario(id_usuario);
