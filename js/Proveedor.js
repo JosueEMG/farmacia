@@ -30,34 +30,37 @@ $(document).ready(function(){
             let template =  '';
             proveedores.forEach(proveedor => {
                 template+=`
-                <div class="col-12 col-sm-6 col-md-4 d-flex align-items-stretch">
+                <div provId="${proveedor.id}" provNombre="${proveedor.nombre}" provTelefono="${proveedor.telefono}" provCorreo="${proveedor.correo}" provDireccion="${proveedor.direccion}" provAvatar="${proveedor.avatar}" class="col-12 col-sm-6 col-md-4 d-flex align-items-stretch">
               <div class="card bg-light">
                 <div class="card-header text-muted border-bottom-0">
-                  Digital Strategist
+                  <h1 class="badge badge-success">Proveedor</h1>
                 </div>
                 <div class="card-body pt-0">
                   <div class="row">
                     <div class="col-7">
-                      <h2 class="lead"><b>Nicole Pearson</b></h2>
-                      <p class="text-muted text-sm"><b>About: </b> Web Designer / UX / Graphic Artist / Coffee Lover </p>
+                      <h2 class="lead"><b>${proveedor.nombre}</b></h2>
                       <ul class="ml-4 mb-0 fa-ul text-muted">
-                        <li class="small"><span class="fa-li"><i class="fas fa-lg fa-building"></i></span> Address: Demo Street 123, Demo City 04312, NJ</li>
-                        <li class="small"><span class="fa-li"><i class="fas fa-lg fa-phone"></i></span> Phone #: + 800 - 12 12 23 52</li>
+                        <li class="small"><span class="fa-li"><i class="fas fa-lg fa-building"></i></span> Direccion: ${proveedor.direccion}</li>
+                        <li class="small"><span class="fa-li"><i class="fas fa-lg fa-phone"></i></span> Telefono: ${proveedor.telefono}</li>
+                        <li class="small"><span class="fa-li"><i class="fas fa-lg fa-at"></i></span> Correo: ${proveedor.correo}</li>
                       </ul>
                     </div>
                     <div class="col-5 text-center">
-                      <img src="../../dist/img/user1-128x128.jpg" alt="user-avatar" class="img-circle img-fluid">
+                      <img src="${proveedor.avatar}" alt="user-avatar" class="img-circle img-fluid">
                     </div>
                   </div>
                 </div>
                 <div class="card-footer">
                   <div class="text-right">
-                    <a href="#" class="btn btn-sm bg-teal">
-                      <i class="fas fa-comments"></i>
-                    </a>
-                    <a href="#" class="btn btn-sm btn-primary">
-                      <i class="fas fa-user"></i> View Profile
-                    </a>
+                    <button class="avatar btn btn-sm btn-info" title="Editar logo" type="button" data-toggle="modal" data-target="#cambiologo">
+                      <i class="fas fa-image"></i>
+                    </button>
+                    <button class="editar btn btn-sm btn-success" title="Editar proveedor">
+                      <i class="fas fa-pencil-alt"></i>
+                    </button>
+                    <button class="avatar btn btn-sm btn-danger" title="Eliminar proveedor">
+                      <i class="fas fa-trash-alt"></i>
+                    </button>
                   </div>
                 </div>
               </div>
@@ -75,5 +78,16 @@ $(document).ready(function(){
         else{
             buscar_prov();
         }
+    });
+    $(document).on('click', '.avatar',(e)=>{
+        funcion = "cambiar_logo";
+        const elemento = $(this)[0].activeElement.parentElement.parentElement.parentElement.parentElement;
+        const id = $(elemento).attr('provId');
+        const nombre = $(elemento).attr('provNombre');
+        const avatar = $(elemento).attr('provAvatar');
+        $('#logoactual').attr('src',avatar);
+        $('#nombre_logo').html(nombre);
+        $('#id_logo_prov').val(id);
+        $('#funcion').val(funcion);
     });
 });
