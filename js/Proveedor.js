@@ -58,7 +58,7 @@ $(document).ready(function(){
                     <button class="editar btn btn-sm btn-success" title="Editar proveedor">
                       <i class="fas fa-pencil-alt"></i>
                     </button>
-                    <button class="avatar btn btn-sm btn-danger" title="Eliminar proveedor">
+                    <button class="borrar btn btn-sm btn-danger" title="Eliminar proveedor">
                       <i class="fas fa-trash-alt"></i>
                     </button>
                   </div>
