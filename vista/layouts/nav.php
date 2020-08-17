@@ -101,6 +101,14 @@
               Gestion atributo
             </p>
           </a>
+        </li>
+        <li class="nav-item">
+          <a href="adm_lote.php" class="nav-link">
+            <i class="nav-icon fas fa-cubes"></i>
+            <p>
+              Gestion lote
+            </p>
+          </a>
         </li> 
         <li class="nav-header">Compras</li>
         <li class="nav-item">
