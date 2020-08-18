@@ -1,4 +1,5 @@
 $(document).ready(function(){
+  contar_productos();
   RecuperarLS_carrito();
     $(document).on('click','.agregar-carrito',(e)=>{
       const elemento =$(this)[0].activeElement.parentElement.parentElement.parentElement.parentElement;
@@ -51,6 +52,8 @@ $(document).ready(function(){
         `;
         $('#lista').append(template);
         AgregarLS(producto);
+        let contador;
+        contar_productos();
       }
 
       
@@ -60,11 +63,13 @@ $(document).ready(function(){
         const id=$(elemento).attr('prodId');
         elemento.remove();
         Eliminar_producto_LS(id);
+        contar_productos();
 
      })
      $(document).on('click','#vaciar-carrito',(e)=>{
       $('#lista').empty();
       EliminarLS();
+      contar_productos();
    })
    function RecuperarLS(){
      let productos;
@@ -112,5 +117,14 @@ $(document).ready(function(){
    }
    function EliminarLS() {
      localStorage.clear();
+   }
+   function contar_productos() {
+     let productos;
+     let contador=0;
+     productos=RecuperarLS();
+     productos.forEach(producto => {
+       contador++;
+     });
+     $('#contador').html(contador);
    }
 })

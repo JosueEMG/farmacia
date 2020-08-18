@@ -34,10 +34,6 @@
 
 
 
-
-
-
-
     .carro tbody tr td:nth-child(1):before{
         content: "Codigo";
         font-weight: bold;
@@ -68,5 +64,15 @@
         font-weight: bold;
         color: black;
     }
+}
 
+.imagen-carrito{
+    position: relative;
+    display: inline-block;
+    text-align: center;
+}
+.contador{
+    position: absolute;
+    top: 0px;
+    right: 4px;
 }
