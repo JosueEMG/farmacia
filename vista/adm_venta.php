@@ -42,8 +42,7 @@ if ($_SESSION['us_tipo'] == 3 || $_SESSION['us_tipo'] == 1) {
                                     <th>Codigo</th>
                                     <th>Fecha</th>
                                     <th>Cliente</th>
-
-                                    <th>DNI.</th>
+                                    <th>DNI</th>
                                     <th>Total</th>
                                     <th>Vendedor</th>
                                 </tr>
