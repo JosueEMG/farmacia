@@ -17,12 +17,12 @@ if ($_SESSION['us_tipo'] == 3 || $_SESSION['us_tipo'] == 1) {
             <div class="container-fluid">
                 <div class="row mb-2">
                     <div class="col-sm-6">
-                        <h1>Gestion ventas</h1>                                      
+                        <h1>Gestion Ventas </h1>                                      
                     </div>
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
                             <li class="breadcrumb-item"><a href="adm_catalogo.php">Home</a></li>
-                            <li class="breadcrumb-item active">Gestion ventas</li>
+                            <li class="breadcrumb-item active">Gestion Ventas</li>
                         </ol>
                     </div>
                 </div>
@@ -42,14 +42,15 @@ if ($_SESSION['us_tipo'] == 3 || $_SESSION['us_tipo'] == 1) {
                                     <th>Codigo</th>
                                     <th>Fecha</th>
                                     <th>Cliente</th>
-                                    <th>DNI</th>
+
+                                    <th>DNI.</th>
                                     <th>Total</th>
                                     <th>Vendedor</th>
                                 </tr>
-                            </thead>
+                            </thead>  
                             <tbody>
-
-                            </tbody>
+                            
+                            </tbody>                          
                         </table>
                     </div>
                     <div class="card-footer">

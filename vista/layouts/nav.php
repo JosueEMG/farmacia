@@ -112,11 +112,11 @@
           </a>
         </li>
         <li class="nav-header">Ventas</li>
-        <li class="nav-item">
+        <li class="nav-item"> 
           <a href="adm_venta.php" class="nav-link">
             <i class="nav-icon fas fa-notes-medical"></i>
             <p>
-              Listar ventas
+              Listar Ventas
             </p>
           </a>
         </li>
