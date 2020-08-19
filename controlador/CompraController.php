@@ -36,10 +36,14 @@ if($_POST['funcion'] == 'registrar_compra'){
                         $cantidad = 0;
                     }
                     if($cantidad == $lote->stock){
+                        $sql = "INSERT INTO detalle_venta(det_cantidad, det_vencimiento, id__det_lote, id__det_prod, lote_id_prov, id_det_venta) values ('$cantidad','$lote->vencimiento','$lote->id_lote','$prod->id','$lote->lote_id_prov','$id_venta')";
+                        $conexion->exec($sql);
                         $conexion->exec("DELETE FROM lote where id_lote='$lote->id_lote'");
                         $cantidad = 0;
                     }
                     if($cantidad > $lote->stock){
+                        $sql = "INSERT INTO detalle_venta(det_cantidad, det_vencimiento, id__det_lote, id__det_prod, lote_id_prov, id_det_venta) values ('$lote->stock','$lote->vencimiento','$lote->id_lote','$prod->id','$lote->lote_id_prov','$id_venta')";
+                        $conexion->exec($sql);
                         $conexion->exec("DELETE FROM lote where id_lote='$lote->id_lote'");
                         $cantidad-=$lote->stock;
                     }
