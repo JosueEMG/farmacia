@@ -29,7 +29,7 @@ class Usuario{
         $sql="SELECT * FROM usuario where id_usuario=:id and contrasena_us=:oldpass";
         $query = $this->acceso->prepare($sql);
         $query->execute(array(':id'=>$id_usuario,':oldpass'=>$oldpass));
-        $this->objetos=$query->fetchall();
+        $this->objetos = $query->fetchall();
         if(!empty($this->objetos)){
             $sql="UPDATE usuario SET contrasena_us=:newpass where id_usuario=:id";
             $query= $this->acceso->prepare($sql);

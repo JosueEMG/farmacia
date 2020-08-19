@@ -10,7 +10,7 @@ class Tipo{
         $sql="SELECT ip_tip_prod FROM tipo_producto where nombre=:nombre";
         $query = $this->acceso->prepare($sql);
         $query->execute(array(':nombre'=>$nombre));
-        $this->objetos=$query->fetchall();
+        $this->objetos = $query->fetchall();
         if(!empty($this->objetos)){
             echo 'noadd';
         }
@@ -24,7 +24,7 @@ class Tipo{
     }
     function buscar(){
         if(!empty($_POST['consulta'])){
-            $consulta=$_POST['consulta'];
+            $consulta = $_POST['consulta'];
             $sql="SELECT * FROM tipo_producto where nombre LIKE :consulta";
             $query = $this->acceso->prepare($sql);
             $query->execute(array(':consulta'=>"%$consulta%"));
