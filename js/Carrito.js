@@ -266,12 +266,16 @@ $(document).ready(function(){
     else{
       verificar_stock().then(error=>{
         if(error == 0){
+          Registrar_compra(nombre, dni);
           Swal.fire({
             position: 'center',
             icon: 'success',
             title: 'Se realizó la compra',
             showConfirmButton: false,
             timer: 1500
+          }).then(function(){
+            EliminarLS();
+            location.href = '../vista/adm_catalogo.php'
           })
         }
         else{
@@ -297,5 +301,14 @@ $(document).ready(function(){
     let error = await response.text();
     
     return error;
+  }
+  function Registrar_compra(nombre, dni){
+    funcion = 'registrar_compra';
+    let total = $('#total').get(0).textContent;
+    let productos = RecuperarLS();
+    let json = JSON.stringify(productos);
+    $.post('../controlador/CompraController.php', {funcion,total,nombre,dni,json},(response)=>{
+      console.log(response);
+    });
   }
 })
