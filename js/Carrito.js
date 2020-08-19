@@ -80,6 +80,10 @@ $(document).ready(function(){
       Procesar_pedido();
       e.preventDefault();
     })
+    $(document).on('click','#procesar-compra',(e)=>{
+      Procesar_compra();
+      e.preventDefault();
+    })
     function RecuperarLS(){
       let productos;
       if(localStorage.getItem('productos')===null){
@@ -238,5 +242,60 @@ $(document).ready(function(){
     $('#total').html(total.toFixed(2));
     $('#vuelto').html(vuelto.toFixed(2));
     
+  }
+  function Procesar_compra() {
+    let nombre, dni;
+    nombre = $('#cliente').val();
+    dni = $('#dni').val();
+    if(RecuperarLS().length == 0){
+      Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: 'No hay productos, seleccione algunos!',
+      }).then(function(){
+        location.href = '../vista/adm_catalogo.php';
+      })
+    }
+    else if(nombre == ''){
+      Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: 'Necesitamos un nombre de cliente!',
+      })
+    }
+    else{
+      verificar_stock().then(error=>{
+        if(error == 0){
+          Swal.fire({
+            position: 'center',
+            icon: 'success',
+            title: 'Se realizó la compra',
+            showConfirmButton: false,
+            timer: 1500
+          })
+        }
+        else{
+          Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Hay conflicto en el stock de algun producto!',
+          })
+        }
+      });
+    }
+  }
+
+  async function verificar_stock() {
+    let productos;
+    funcion = 'verificar_stock';
+    productos = RecuperarLS();
+    const response = await fetch('../controlador/ProductoController.php', {
+      method: 'POST',
+      headers: {'Content-Type':'application/x-www-form-urlencoded'},
+      body: 'funcion='+funcion+'&&productos='+JSON.stringify(productos)
+    })
+    let error = await response.text();
+    
+    return error;
   }
 })
