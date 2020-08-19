@@ -10,7 +10,7 @@ class Proveedor{
         $sql="SELECT id_proveedor FROM proveedor where nombre=:nombre";
         $query = $this->acceso->prepare($sql);
         $query->execute(array(':nombre'=>$nombre));
-        $this->objetos=$query->fetchall();
+        $this->objetos = $query->fetchall();
         if(!empty($this->objetos)){
             echo 'noadd';
         }
