@@ -1,4 +1,5 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="../css/datatables.css">
 <link rel="stylesheet" href="../css/compra.css">
 <link rel="stylesheet" href="../css/main.css">
 <!-- select2 -->
@@ -110,7 +111,15 @@
             </p>
           </a>
         </li>
-        
+        <li class="nav-header">Ventas</li>
+        <li class="nav-item">
+          <a href="adm_venta.php" class="nav-link">
+            <i class="nav-icon fas fa-notes-medical"></i>
+            <p>
+              Listar ventas
+            </p>
+          </a>
+        </li>
         <li class="nav-header">Almacen</li>
         <li class="nav-item">
           <a href="adm_producto.php" class="nav-link">
