@@ -44,7 +44,7 @@
                 <th>Concentracion</th>
                 <th>Adicional</th>
                 <th>Precio</th>
-                <th>Eliminar</th>
+                <th>Eliminar base de datos</th>
               </tr>
             </thead>
             <tbody id="lista">
