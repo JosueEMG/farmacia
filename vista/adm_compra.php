@@ -61,7 +61,7 @@ if ($_SESSION['us_tipo'] == 1 || $_SESSION['us_tipo'] == 3) {
                                 </div>
                             </div>
                         </header>
-                        <button id="actualizar"class="btn btn-success">Actualizar</button>
+                        <button id="actualizar" class="btn btn-success">Actualizar</button>
                         <div id="cp"class="card-body p-0">
                             <table class="compra table table-hover text-nowrap">
                                 <thead class='table-success'>
@@ -109,7 +109,7 @@ if ($_SESSION['us_tipo'] == 1 || $_SESSION['us_tipo'] == 3) {
                                             <div class="info-box mb-3 bg-info">
                                                 <span class="info-box-icon"><i class="fas fa-tag"></i></span>
                                                 <div class="info-box-content">
-                                                    <span class="info-box-text text-left ">SIN DESCUENTO</span>
+                                                    <span class="info-box-text text-left ">SUB TOTAL + IGV</span>
                                                     <span class="info-box-number" id="total_sin_descuento">12</span>
                                                 </div>
                                             </div>
@@ -129,7 +129,7 @@ if ($_SESSION['us_tipo'] == 1 || $_SESSION['us_tipo'] == 3) {
                                                 <span class="info-box-icon"><i class="fas fa-comment-dollar"></i></span>
                                                 <div class="info-box-content">
                                                     <span class="info-box-text text-left ">DESCUENTO</span>
-                                                    <input id="descuento"type="number" min="1" placeholder="Ingrese descuento" class="form-control">
+                                                    <input id="descuento" type="number" min="1" placeholder="Ingrese descuento" class="form-control">
                                                 </div>
                                             </div>
                                             <div class="info-box mb-3 bg-info">
@@ -156,7 +156,6 @@ if ($_SESSION['us_tipo'] == 1 || $_SESSION['us_tipo'] == 3) {
                                             <div class="info-box-content">
                                                 <span class="info-box-text text-left ">INGRESO</span>
                                                 <input type="number" id="pago" min="1" placeholder="Ingresa Dinero" class="form-control">
-                                               
                                             </div>
                                         </div>
                                         <div class="info-box mb-3 bg-info">
