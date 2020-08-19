@@ -110,7 +110,15 @@
             </p>
           </a>
         </li>
-        
+        <li class="nav-header">Ventas</li>
+        <li class="nav-item"> 
+          <a href="adm_venta.php" class="nav-link">
+            <i class="nav-icon fas fa-notes-medical"></i>
+            <p>
+              Listar Ventas
+            </p>
+          </a>
+        </li>
         <li class="nav-header">Almacen</li>
         <li class="nav-item">
           <a href="adm_producto.php" class="nav-link">
