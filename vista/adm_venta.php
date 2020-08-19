@@ -36,7 +36,21 @@ if ($_SESSION['us_tipo'] == 3||$_SESSION['us_tipo'] == 1) {
                         
                     </div>
                     <div class="card-body">
-                        
+                        <table id="tabla_venta" class="display table table-hover text-nowrap" style="width:100%">
+                            <thead>
+                                <tr>
+                                    <th>Codigo</th>
+                                    <th>Fecha</th>
+                                    <th>Cliente</th>
+                                    <th>DNI.</th>
+                                    <th>Total</th>
+                                    <th>Vendedor</th>
+                                </tr>
+                            </thead>  
+                            <tbody>
+                            
+                            </tbody>                          
+                        </table>
                     </div>
                     <div class="card-footer">
 
@@ -52,4 +66,5 @@ if ($_SESSION['us_tipo'] == 3||$_SESSION['us_tipo'] == 1) {
     header('Location: ../index.php');
 }
 ?>
+<script src="../js/datatables.js"></script>
 <script src="../js/Venta.js"></script>
