@@ -23,6 +23,7 @@ class Venta{
         $sql="DELETE FROM venta where id_venta=:id_venta";
         $query = $this->acceso->prepare($sql);
         $query->execute(array(':id_venta'=>$id_venta));
+        echo 'delete';
     }
     function buscar(){
         $sql="SELECT id_venta,fecha,cliente,dni,total, CONCAT(usuario.nombre_us,' ',usuario.apellidos_us) as vendedor FROM venta join usuario on vendedor=id_usuario";
@@ -30,5 +31,17 @@ class Venta{
         $query->execute();
         $this->objetos=$query->fetchall();
         return $this->objetos;
+    }
+    function verificar($id_venta, $id_usuario){
+        $sql="SELECT * FROM venta where vendedor=:id_usuario and id_venta=:id_venta";
+        $query = $this->acceso->prepare($sql);
+        $query->execute(array(':id_usuario'=>$id_usuario, ':id_venta'=>$id_venta));
+        $this->objetos=$query->fetchall();
+        if(!empty($this->objetos)){
+            return 1;
+        }
+        else {
+            return 0;
+        }
     }
 }

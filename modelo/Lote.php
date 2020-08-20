@@ -56,6 +56,9 @@ class Lote{
             echo 'no borrado';
         }
     }
+    function devolver($id_lote, $cantidad, $vencimiento, $producto, $proveedor){
+        
+    }
 }
 
 
