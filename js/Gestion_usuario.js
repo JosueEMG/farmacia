@@ -57,7 +57,7 @@ $(document).ready(function(){
                   }
                   if(usuario.tipo_usuario==2){
                     template+=`
-                    <button class="ascender btn btn-primary mr-1" type="button" data-toggle="modal" data-target="#confirmar">
+                    <button class="ascender btn btn-primary m-1" type="button" data-toggle="modal" data-target="#confirmar">
                       <i class="fas fa-sort-amount-up mr-1"></i>Ascender
                     </button>
                     `;
