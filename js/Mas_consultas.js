@@ -12,7 +12,6 @@ $(document).ready(function(){
         }).then(function(response){
             return response.json();           
         }).then(function(vendedores){
-            console.log(lista);
             let i=0;
             vendedores.forEach(vendedor => {
                 lista[i]=vendedor;
