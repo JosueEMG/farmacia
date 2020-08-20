@@ -48,36 +48,36 @@ $(document).ready(function(){
                 <div class="card-footer">
                   <div class="text-right">`;
                 if(tipo_usuario==3){
+                  if(usuario.tipo_usuario!=3){
+                    template+=`
+                    <button class="borrar-usuario btn btn-danger m-1" type="button" data-toggle="modal" data-target="#confirmar">
+                      <i class="fas fa-window-close mr-1"></i>Eliminar
+                    </button>
+                    `;
+                  }
                   if(usuario.tipo_usuario==2){
                     template+=`
                     <button class="ascender btn btn-primary mr-1" type="button" data-toggle="modal" data-target="#confirmar">
-                    <i class="fas fa-sort-amount-up mr-1"></i>Ascender
+                      <i class="fas fa-sort-amount-up mr-1"></i>Ascender
                     </button>
                     `;
                   }
                   if(usuario.tipo_usuario==1){
                     template+=`
-                    <button class="descender btn btn-secondary mr-1" type="button" data-toggle="modal" data-target="#confirmar">
-                    <i class="fas fa-sort-amount-down mr-1"></i>Descender
+                    <button class="descender btn btn-secondary m-1" type="button" data-toggle="modal" data-target="#confirmar">
+                      <i class="fas fa-sort-amount-down mr-1"></i>Descender
                     </button>
-                    `; 
+                    `;
                   }
                 }
                 else{
                   if(tipo_usuario==1 && usuario.tipo_usuario!=1 && usuario.tipo_usuario!=3){
                     template+=`
-                    <button class="borrar-usuario btn btn-danger" type="button" data-toggle="modal" data-target="#confirmar">
-                    <i class="fas fa-window-close mr-1"></i>Eliminar
+                    <button class="borrar-usuario btn btn-danger m-1" type="button" data-toggle="modal" data-target="#confirmar">
+                      <i class="fas fa-window-close mr-1"></i>Eliminar
                     </button>
                     `;
                   }
-                }
-                if(usuario.tipo_usuario!=3){
-                  template+=`
-                  <button class="borrar-usuario btn btn-danger ml-1" type="button" data-toggle="modal" data-target="#confirmar">
-                  <i class="fas fa-window-close mr-1"></i>Eliminar
-                  </button>
-                  `;
                 }
                 template+=`
                   </div>

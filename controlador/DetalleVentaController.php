@@ -24,10 +24,33 @@ if($_POST['funcion']=='borrar_venta'){
     }
     else{
         if($tipo_usuario==3){
-
+            $venta_producto->borrar($id_venta);
+            $detalle_venta->recuperar($id_venta);
+            foreach ($detalle_venta->objetos as $det) {
+                $lote->devolver($det->id__det_lote, $det->det_cantidad, $det->det_vencimiento, $det->id__det_prod, $det->lote_id_prov);
+                $detalle_venta->borrar($det->id_detalle);
+            }
+            $venta->borrar($id_venta);
         }
         else if($tipo_usuario==1){
-
+            $venta->recuperar_vendedor($id_venta);
+            foreach ($venta->objetos as $objeto) {
+                if($objeto->us_tipo==2){
+                    $venta_producto->borrar($id_venta);
+                    $detalle_venta->recuperar($id_venta);
+                    foreach ($detalle_venta->objetos as $det) {
+                        $lote->devolver($det->id__det_lote, $det->det_cantidad, $det->det_vencimiento, $det->id__det_prod, $det->lote_id_prov);
+                        $detalle_venta->borrar($det->id_detalle);
+                    }
+                    $venta->borrar($id_venta);
+                }
+                else{
+                    echo 'nodelete';
+                }
+            }
+        }
+        else{
+            echo 'nodelete';
         }
     }
 }

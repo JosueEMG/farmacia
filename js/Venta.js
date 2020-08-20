@@ -43,13 +43,22 @@ $(document).ready(function(){
           }).then((result) => {
             if (result.value) {
                 $.post('../controlador/DetalleVentaController.php', {funcion, id}, (response)=>{
-                    console.log(response);
+                    if(response=='delete'){
+                        swalWithBootstrapButtons.fire(
+                            'Eliminado!',
+                            'La venta: '+id+' ha sido eliminada',
+                            'success'
+                          )
+                    }
+                    else if(response=='nodelete'){
+                        swalWithBootstrapButtons.fire(
+                            'No eliminado',
+                            'No tienes privilegios para eliminar esta venta',
+                            'error'
+                          )
+                    }
                 })
-                swalWithBootstrapButtons.fire(
-                'Eliminado!',
-                'La venta: '+id+' ha sido eliminada',
-                'success'
-              )
+              
             }else if (result.dismiss === Swal.DismissReason.cancel){
                 swalWithBootstrapButtons.fire(
                 'No eliminado',

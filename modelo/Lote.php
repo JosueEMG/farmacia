@@ -1,5 +1,5 @@
 <?php
-include 'Conexion.php';
+include_once 'Conexion.php';
 class Lote{
     var $objetos;
     public function __construct(){
@@ -52,11 +52,40 @@ class Lote{
         $query->execute(array(':id'=>$id));
         if(!empty($query->execute(array(':id'=>$id)))){
             echo 'borrado';
-        }else{
+        }
+        else{
             echo 'no borrado';
         }
     }
     function devolver($id_lote, $cantidad, $vencimiento, $producto, $proveedor){
+        $sql="SELECT * FROM lote WHERE id_lote=:id_lote";
+        $query = $this->acceso->prepare($sql);
+        $query->execute(array(':id_lote'=>$id_lote));
+        $lote = $query->fetchall();
+        if(!empty($lote)){
+            $sql = "UPDATE lote SET stock=stock+:cantidad where id_lote=:id_lote";
+            $query = $this->acceso->prepare($sql);
+            $query->execute(array(':cantidad'=>$cantidad,':id_lote'=>$id_lote));
+        }
+        else{
+            $sql="SELECT * FROM lote WHERE vencimiento=:vencimiento and lote_id_prod=:producto and lote_id_prod=:proveedor";
+            $query = $this->acceso->prepare($sql);
+            $query->execute(array(':vencimiento'=>$vencimiento,':producto'=>$producto,':proveedor'=>$proveedor));
+            $lote_nuevo = $query->fetchall();
+            foreach ($lote_nuevo as $objeto) {
+                $id_lote_nuevo = $objeto->id_lote;
+            }
+            if(!empty($lote_nuevo)){
+                $sql = "UPDATE lote SET stock=stock+:cantidad where id_lote=:id_lote";
+                $query = $this->acceso->prepare($sql);
+                $query->execute(array(':cantidad'=>$cantidad,':id_lote'=>$id_lote_nuevo));
+            }
+            else{
+                $sql = "INSERT INTO lote(id_lote,stock,vencimiento,lote_id_prod,lote_id_prov) values(:id_lote,:stock,:vencimiento,:producto,:proveedor)";
+                $query = $this->acceso->prepare($sql);
+                $query->execute(array(':id_lote'=>$id_lote,':stock'=>$cantidad,':vencimiento'=>$vencimiento,':producto'=>$producto,':proveedor'=>$proveedor));
+            }
+        }
         
     }
 }
