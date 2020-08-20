@@ -95,4 +95,15 @@ class Venta{
         $this->objetos=$query->fetchall();
         return $this->objetos;
     }
+    function vendedor_mes(){
+        $sql="SELECT CONCAT(usuario.nombre_us,' ',usuario.apellidos_us) as vendedor_nombre, sum(total) as cantidad FROM `venta` 
+        JOIN usuario on id_usuario=vendedor 
+        where month(fecha)=month(curdate()) 
+        and year(fecha)=year(curdate()) 
+        group by vendedor order by cantidad DESC limit 3";
+        $query = $this->acceso->prepare($sql);
+        $query->execute();
+        $this->objetos=$query->fetchall();
+        return $this->objetos;
+    }
 }

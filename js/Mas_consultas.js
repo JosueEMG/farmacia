@@ -1,6 +1,76 @@
 $(document).ready(function(){
     let funcion;
     venta_mes();
+    vendedor_mes();
+    async function vendedor_mes(){
+        funcion='vendedor_mes';
+        let lista=['','',''];
+        const response = await fetch('../controlador/VentaController.php',{
+            method: 'POST',
+            headers: {'Content-Type':'application/x-www-form-urlencoded'},
+            body: 'funcion='+funcion
+        }).then(function(response){
+            return response.json();           
+        }).then(function(vendedores){
+            console.log(lista);
+            let i=0;
+            vendedores.forEach(vendedor => {
+                lista[i]=vendedor;
+                i++;
+            });
+        })
+        let CanvasG2 = $('#Grafico2').get(0).getContext('2d');
+        let datos={
+            labels:[
+                'Mes actual'
+            ],
+            datasets:[
+                {
+                    label               : lista[0].vendedor_nombre,
+                    backgroundColor     : 'rgba(60,141,188,0.9)',
+                    borderColor         : 'rgba(60,141,188,0.8)',
+                    pointRadius         : false,
+                    pointColor          : '#3b8bba',
+                    pointStrokeColor    : 'rgba(60,141,188,1)',
+                    pointHighlightFill  : '#fff',
+                    pointHighlightStroke: 'rgba(60,141,188,1)',
+                    data                : [lista[0].cantidad]
+                },
+                {
+                    label               : lista[1].vendedor_nombre,
+                    backgroundColor     : 'rgba(255,0,0,1)',
+                    borderColor         : 'rgba(255,0,0,1)',
+                    pointRadius         : false,
+                    pointColor          : '#3b8bba',
+                    pointStrokeColor    : 'rgba(255,0,0,1)',
+                    pointHighlightFill  : '#fff',
+                    pointHighlightStroke: 'rgba(255,0,0,1)',
+                    data                : [lista[1].cantidad]
+                },
+                {
+                    label               : lista[2].vendedor_nombre,
+                    backgroundColor     : 'rgba(0,255,0,1)',
+                    borderColor         : 'rgba(0,255,0,1)',
+                    pointRadius         : false,
+                    pointColor          : '#3b8bba',
+                    pointStrokeColor    : 'rgba(0,255,0,1)',
+                    pointHighlightFill  : '#fff',
+                    pointHighlightStroke: 'rgba(0,255,0,1)',
+                    data                : [lista[2].cantidad]
+                },
+            ]
+        }
+        let opciones ={
+            responsive:true,
+            maintainAspectRatio:false,
+            datasetFill:false,
+        }
+        let G2 = new Chart(CanvasG2,{
+            type:'bar',
+            data:datos,
+            options:opciones,
+        })
+    }
     async function venta_mes(){
         funcion = 'venta_mes';
         let array = ['','','','','','','','','','','',''];
