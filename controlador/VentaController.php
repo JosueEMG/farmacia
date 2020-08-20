@@ -40,3 +40,12 @@ if($_POST['funcion']=='mostrar_consultas'){
     echo $jsonstring;
     
 }
+if($_POST['funcion']=='venta_mes'){
+    $venta->venta_mes();
+    $json = array();
+    foreach ($venta->objetos as $objeto) {
+        $json[] = $objeto;
+    }
+    $jsonstring = json_encode($json);
+    echo $jsonstring;
+}

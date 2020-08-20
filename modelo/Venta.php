@@ -88,4 +88,11 @@ class Venta{
         $this->objetos=$query->fetchall();
         return $this->objetos;
     }
+    function venta_mes(){
+        $sql="SELECT SUM(total) as cantidad, month(fecha) as mes FROM venta WHERE year(fecha) = year(curdate()) GROUP BY month(fecha)";
+        $query = $this->acceso->prepare($sql);
+        $query->execute();
+        $this->objetos=$query->fetchall();
+        return $this->objetos;
+    }
 }
