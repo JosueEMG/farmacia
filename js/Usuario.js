@@ -27,7 +27,7 @@
               if(usuario.tipo=='Administrador'){
                 tipo+=`<h1 class="badge badge-warning">${usuario.tipo}</h1>`;
               }
-              if(usuario.tipo_usuario=='Tecnico'){
+              if(usuario.tipo=='Tecnico'){
                 tipo+=`<h1 class="badge badge-info">${usuario.tipo}</h1>`;
               }   
             telefono+=`${usuario.telefono}`;
