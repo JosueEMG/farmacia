@@ -3,6 +3,97 @@ $(document).ready(function(){
     venta_mes();
     vendedor_mes();
     ventas_anual();
+    producto_mas_vendido();
+    async function producto_mas_vendido(){
+        funcion='producto_mas_vendido';
+        let lista=['','','','',''];
+        const response = await fetch('../controlador/VentaController.php',{
+            method: 'POST',
+            headers: {'Content-Type':'application/x-www-form-urlencoded'},
+            body: 'funcion='+funcion
+        }).then(function(response){
+            return response.json();           
+        }).then(function(productos){
+            let i=0;
+            productos.forEach(producto => {
+                lista[i]=producto;
+                i++;
+            });
+        })
+        let CanvasG4 = $('#Grafico4').get(0).getContext('2d');
+        let datos={
+            labels:[
+                'Mes actual'
+            ],
+            datasets:[
+                {
+                    label               : lista[0].nombre+lista[0].concentracion+lista[0].adicional,
+                    backgroundColor     : 'rgba(60,141,188,0.9)',
+                    borderColor         : 'rgba(60,141,188,0.8)',
+                    pointRadius         : false,
+                    pointColor          : '#3b8bba',
+                    pointStrokeColor    : 'rgba(60,141,188,1)',
+                    pointHighlightFill  : '#fff',
+                    pointHighlightStroke: 'rgba(60,141,188,1)',
+                    data                : [lista[0].total]
+                },
+                {
+                    label               : lista[1].nombre+lista[1].concentracion+lista[1].adicional,
+                    backgroundColor     : 'rgba(255,0,0,1)',
+                    borderColor         : 'rgba(255,0,0,1)',
+                    pointRadius         : false,
+                    pointColor          : '#3b8bba',
+                    pointStrokeColor    : 'rgba(255,0,0,1)',
+                    pointHighlightFill  : '#fff',
+                    pointHighlightStroke: 'rgba(255,0,0,1)',
+                    data                : [lista[1].total]
+                },
+                {
+                    label               : lista[2].nombre+lista[2].concentracion+lista[2].adicional,
+                    backgroundColor     : 'rgba(0,0,255,1)',
+                    borderColor         : 'rgba(0,0,255,1)',
+                    pointRadius         : false,
+                    pointColor          : '#3b8bba',
+                    pointStrokeColor    : 'rgba(0,0,255,1)',
+                    pointHighlightFill  : '#fff',
+                    pointHighlightStroke: 'rgba(0,0,255,1)',
+                    data                : [lista[2].total]
+                },
+                {
+                    label               : lista[3].nombre+lista[3].concentracion+lista[3].adicional,
+                    backgroundColor     : 'rgba(0,230,15,1)',
+                    borderColor         : 'rgba(0,230,15,1)',
+                    pointRadius         : false,
+                    pointColor          : '#3b8bba',
+                    pointStrokeColor    : 'rgba(0,230,15,1)',
+                    pointHighlightFill  : '#fff',
+                    pointHighlightStroke: 'rgba(0,230,15,1)',
+                    data                : [lista[3].total]
+                },
+                {
+                    label               : lista[4].nombre+lista[4].concentracion+lista[4].adicional,
+                    backgroundColor     : 'rgba(255,255,0,1)',
+                    borderColor         : 'rgba(255,255,0,1)',
+                    pointRadius         : false,
+                    pointColor          : '#3b8bba',
+                    pointStrokeColor    : 'rgba(255,255,0,1)',
+                    pointHighlightFill  : '#fff',
+                    pointHighlightStroke: 'rgba(255,255,0,1)',
+                    data                : [lista[4].total]
+                },
+            ]
+        }
+        let opciones ={
+            responsive:true,
+            maintainAspectRatio:false,
+            datasetFill:false,
+        }
+        let G4 = new Chart(CanvasG4,{
+            type:'bar',
+            data:datos,
+            options:opciones,
+        })
+    }
     async function ventas_anual(){
         funcion='ventas_anual';
         let lista=['','','','','','','','','','','',''];
