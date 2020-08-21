@@ -1,0 +1,6 @@
+notificacion de cambio de contraseña, de ascender, descender y de eliminar.
+el producto no se elimina (Arreglado), cuando se elimina, elimina tambien el lote
+al cambiar la contra, acepta una contra vacia (Arreglado)
+notificacion de cambio de datos. (Arreglado)
+no hay una funcion para el evento click del nombre de usuario en el nav. (Arreglado)
+No hay una funcion para el "Contact" en el header
