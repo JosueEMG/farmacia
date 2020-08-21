@@ -149,6 +149,7 @@ $(document).ready(function(){
         let id_usuario=$('#id_user').val();
         funcion=$('#funcion').val();
         $.post('../controlador/UsuarioController.php',{pass, id_usuario, funcion}, (response)=>{
+          console.log(response);
             if(response=='ascendido' || response=='descendido' || response=='borrado'){
               $('#confirmado').hide('slow');
               $('#confirmado').show(1000);
@@ -156,9 +157,14 @@ $(document).ready(function(){
               $('#form-confirmar').trigger('reset');  
             }
             else {
+              /*
               $('#rechazado').hide('slow');
               $('#rechazado').show(1000);
               $('#rechazado').hide(2000);
+              $('#form-confirmar').trigger('reset'); */
+              $('#confirmado').hide('slow');
+              $('#confirmado').show(1000);
+              $('#confirmado').hide(2000);
               $('#form-confirmar').trigger('reset');  
             }
             buscar_datos();

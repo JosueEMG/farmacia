@@ -74,7 +74,7 @@ class Producto{
         if(!empty($query->execute(array(':id'=>$id)))){
             echo 'borrado';
         }else{
-            echo 'no borrado';
+            echo 'noborrado';
         }
     }
     function obtener_stock($id){

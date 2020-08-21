@@ -56,7 +56,7 @@ if ($_SESSION['us_tipo'] == 3) {
                     </div>
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
-                            <li class="breadcrumb-item"><a href="adm_catalogo.php">Home</a></li>
+                            <li class="breadcrumb-item"><a href="adm_catalogo.php">Catalogo</a></li>
                             <li class="breadcrumb-item active">Gestion lote</li>
                         </ol>
                     </div>

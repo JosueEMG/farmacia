@@ -59,12 +59,13 @@
             const usuario=JSON.parse(response);
             $('#telefono').val(usuario.telefono);
             $('#residencia').val(usuario.residencia);
-            $('#correo').val(usuario.correo);            $('#sexo').val(usuario.sexo);
+            $('#correo').val(usuario.correo);            
+            $('#sexo').val(usuario.sexo);
             $('#adicional').val(usuario.adicional);
         })
     });
     $('#form-usuario').submit(e=>{
-        if(edit===true){
+        if(edit==true){
             let telefono=$('#telefono').val();
             let residencia=$('#residencia').val();
             let correo=$('#correo').val();
@@ -72,13 +73,12 @@
             let adicional=$('#adicional').val();
             funcion='editar_usuario';
             $.post('../controlador/UsuarioController.php',{id_usuario, funcion, telefono, residencia, correo, sexo, adicional},(response)=>{
-                if(response='editado'){
-                    $('#editado').hide('slow');
-                    $('#editado').show(1000);
-                    $('#editado').hide(2000);
-                    $('#form-usuario').trigger('reset');
-                    buscar_usuario();
-                }
+                $('#editado').hide('slow');
+                $('#editado').show(1000);
+                $('#editado').hide(2000);
+                $('#form-usuario').trigger('reset');
+                //no es necesario mostrar el metodo buscar_usuario
+                //buscar_usuario();
                 edit=false;
                 buscar_usuario(id_usuario);
             })
@@ -97,7 +97,7 @@
         funcion='cambiar_contra';
         $.post('../controlador/UsuarioController.php',{id_usuario, funcion, oldpass, newpass}, (response)=>{
             console.log(response);
-            if(response='update'){
+            if(response=='updateupdate'){
                 $('#update').hide('slow');
                 $('#update').show(1000);
                 $('#update').hide(2000);

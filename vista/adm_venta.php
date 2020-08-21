@@ -83,7 +83,7 @@ if ($_SESSION['us_tipo'] == 3 || $_SESSION['us_tipo'] == 1 || $_SESSION['us_tipo
                     </div>
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
-                            <li class="breadcrumb-item"><a href="adm_catalogo.php">Home</a></li>
+                            <li class="breadcrumb-item"><a href="adm_catalogo.php">Catalogo</a></li>
                             <li class="breadcrumb-item active">Gestion Ventas</li>
                         </ol>
                     </div>

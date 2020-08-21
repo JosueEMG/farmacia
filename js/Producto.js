@@ -240,7 +240,7 @@ $(document).ready(function(){
     $(document).on('click', '.borrar', (e)=>{
       funcion="borrar";
       const elemento = $(this)[0].activeElement.parentElement.parentElement.parentElement.parentElement;
-      const id = $(elemento).attr('proId');
+      const id = $(elemento).attr('prodId');
       const nombre = $(elemento).attr('prodNombre');;
       const avatar = $(elemento).attr('prodAvatar');; 
 
@@ -276,7 +276,7 @@ $(document).ready(function(){
                   }else{
                       swalWithBootstrapButtons.fire(
                           'No se pudo borrar',
-                          'El producto '+nombre+' no fue borrado debido a que esta siendo usado por un producto',
+                          'El producto '+nombre+' no fue borrado debido a que esta siendo usado por un lote',
                           'error'
                         )
                   }

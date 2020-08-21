@@ -53,13 +53,17 @@ if($_POST['funcion']=='editar_usuario'){
     $sexo=$_POST['sexo'];
     $adicional=$_POST['adicional'];
     $usuario->editar($id_usuario, $telefono, $residencia, $correo, $sexo, $adicional);
-    echo 'editado';
 }
 if($_POST['funcion']=='cambiar_contra'){
     $id_usuario=$_POST['id_usuario'];
     $oldpass=$_POST['oldpass'];
     $newpass=$_POST['newpass'];
-    $usuario->cambiar_contra($id_usuario,$oldpass,$newpass);
+    if($newpass==''){
+        echo 'noupdate';
+    }
+    else{
+        $usuario->cambiar_contra($id_usuario,$oldpass,$newpass);
+    }
 }
 if($_POST['funcion']=='cambiar_foto'){
     if(($_FILES['photo']['type']=='image/jpeg')||($_FILES['photo']['type']=='image/png')||($_FILES['photo']['type']=='image/gif')){

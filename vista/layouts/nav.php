@@ -28,7 +28,7 @@
       <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
     </li>
     <li class="nav-item d-none d-sm-inline-block">
-      <a href="../vista/adm_catalogo.php" class="nav-link">Home</a>
+      <a href="../vista/adm_catalogo.php" class="nav-link">Catalogo</a>
     </li>
     <li class="nav-item d-none d-sm-inline-block">
       <a href="#" class="nav-link">Contact</a>
@@ -69,11 +69,8 @@
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
   <!-- Brand Logo -->
   <a href="../vista/adm_catalogo.php" class="brand-link">
-    <img src="../img/logo.png"
-         alt="AdminLTE Logo"
-         class="brand-image img-circle elevation-3"
-         style="opacity: .8">
-    <span class="brand-text font-weight-light">Farmacia</span>
+    <img src="../img/logo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+    <span class="brand-text font-weight-light d-block">Farmacia</span>
   </a>
 
   <!-- Sidebar -->
@@ -81,10 +78,10 @@
     <!-- Sidebar user (optional) -->
     <div class="user-panel mt-3 pb-3 mb-3 d-flex">
       <div class="image">
-        <img id="avatar4" src="../img/avatar.png" class="img-circle elevation-2" alt="User Image">
+        <a href="editar_datos_personales.php"><img id="avatar4" src="../img/avatar.png" class="img-circle elevation-2" alt="User Image"></a>
       </div>
       <div class="info">
-        <a href="#" class="d-block">
+        <a href="editar_datos_personales.php" class="d-block">
          <?php 
           echo $_SESSION['nombre_us'];
          ?>

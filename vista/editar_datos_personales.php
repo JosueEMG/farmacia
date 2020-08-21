@@ -48,7 +48,7 @@ if ($_SESSION['us_tipo'] == 1 || $_SESSION['us_tipo'] == 3 || $_SESSION['us_tipo
                             </div>
                             <input id="newpass" type="text" class="form-control" placeholder="Ingrese password nueva">
                         </div>
-            </div>
+                </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Cerrar</button>
                     <button type="submit" class="btn bg-gradient-primary">Guardar</button>
@@ -109,7 +109,7 @@ if ($_SESSION['us_tipo'] == 1 || $_SESSION['us_tipo'] == 3 || $_SESSION['us_tipo
                     </div>
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
-                            <li class="breadcrumb-item"><a href="adm_catalogo.php">Home</a></li>
+                            <li class="breadcrumb-item"><a href="adm_catalogo.php">Catalogo</a></li>
                             <li class="breadcrumb-item active">Datos Personales</li>
                         </ol>
                     </div>
@@ -224,7 +224,7 @@ if ($_SESSION['us_tipo'] == 1 || $_SESSION['us_tipo'] == 3 || $_SESSION['us_tipo
                                         </div>
                                         <div class="form-group row">
                                             <div class="offset-sm-2 col-sm-10 float-right">
-                                                <button class="btn btn-block btn-outline-success">Guardar</button>
+                                                <button type="submit" class="btn btn-block btn-outline-success">Guardar</button>
                                             </div>
                                         </div>
                                     </form>

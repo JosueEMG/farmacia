@@ -46,15 +46,15 @@ if ($_SESSION['us_tipo'] == 1 || $_SESSION['us_tipo'] == 3) {
                             <input type="hidden" id="id_user">
                             <input type="hidden" id="funcion">
                         </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Cerrar</button>
+                            <button type="submit" class="btn bg-gradient-primary">Guardar</button>
+                        </div>
+                    </form>
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Cerrar</button>
-                    <button type="submit" class="btn bg-gradient-primary">Guardar</button>
-                </div>
-                </form>
             </div>
         </div>
-    </div>
     <div class="modal fade" id="crearusuario" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -116,7 +116,7 @@ if ($_SESSION['us_tipo'] == 1 || $_SESSION['us_tipo'] == 3) {
                     </div>
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
-                            <li class="breadcrumb-item"><a href="adm_catalogo.php">Home</a></li>
+                            <li class="breadcrumb-item"><a href="adm_catalogo.php">Catalogo</a></li>
                             <li class="breadcrumb-item active">Gestion usuario</li>
                         </ol>
                     </div>

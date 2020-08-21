@@ -37,6 +37,7 @@ class Usuario{
         $sql="UPDATE usuario SET telefono_us=:telefono,residencia_us=:residencia,correo_us=:correo,sexo_us=:sexo,adicional_us=:adicional where id_usuario=:id";
         $query = $this->acceso->prepare($sql);
         $query->execute(array(':id'=>$id_usuario,':telefono'=>$telefono,':residencia'=>$residencia,':correo'=>$correo,':sexo'=>$sexo,':adicional'=>$adicional));
+        echo 'editado';
     }
     function cambiar_contra($id_usuario,$oldpass,$newpass){
         $sql="SELECT * FROM usuario where id_usuario=:id";
@@ -182,7 +183,7 @@ class Usuario{
         }
     }
     function borrar($pass, $id_borrado, $id_usuario){
-        $sql="SELECT id_usuario FROM usuario where id_usuario=:id_usuario";
+        $sql="SELECT * FROM usuario where id_usuario=:id_usuario";
         $query = $this->acceso->prepare($sql);
         $query->execute(array(':id_usuario'=>$id_usuario));
         $this->objetos=$query->fetchall();
