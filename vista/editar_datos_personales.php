@@ -3,16 +3,13 @@ session_start();
 if ($_SESSION['us_tipo'] == 1 || $_SESSION['us_tipo'] == 3 || $_SESSION['us_tipo'] == 2) {
     include_once 'layouts/header.php';
 ?>
-
     <title>Adm | Editar Datos</title>
-    <!-- Tell the browser to be responsive to screen width -->
     <?php
     include_once 'layouts/nav.php';
     ?>
-    <!-- Button trigger modal -->
 
-    <!-- Modal -->
-    <div class="modal fade" id="cambiocontra" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <!-- MODAL DE CAMBIO DE CONTRASEÑA--> 
+    <div class="animate__animated animate__bounceInDown modal fade" id="cambiocontra" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -60,7 +57,8 @@ if ($_SESSION['us_tipo'] == 1 || $_SESSION['us_tipo'] == 3 || $_SESSION['us_tipo
             </div>
         </div>
     </div>
-    <div class="modal fade" id="cambiophoto" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<!-- MODAL DE CAMBIO DE FOTO-->    
+    <div class="animate__animated animate__bounceInDown modal fade" id="cambiophoto" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -104,7 +102,7 @@ if ($_SESSION['us_tipo'] == 1 || $_SESSION['us_tipo'] == 3 || $_SESSION['us_tipo
     <div class="content-wrapper">
         <!-- Content Header (Page header) -->
         <section class="content-header">
-            <div class="container-fluid">
+            <div class="container-fluid">S
                 <div class="row mb-2">
                     <div class="col-sm-6">
                         <h1>Datos Personales</h1>

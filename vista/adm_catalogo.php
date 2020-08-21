@@ -16,7 +16,7 @@ if ($_SESSION['us_tipo'] == 1 || $_SESSION['us_tipo'] == 3 || $_SESSION['us_tipo
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Catalogo</h1>
+            <h1 class="animate__animated animate__shakeY">Catalogo</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
@@ -35,7 +35,7 @@ if ($_SESSION['us_tipo'] == 1 || $_SESSION['us_tipo'] == 3 || $_SESSION['us_tipo
                         <h3 class="card-title">Lotes en Riesgo</h3>                      
                     </div>
                     <div class="card-body p-0 table-responsive">
-                      <table class="table table-hover text-nowrap">
+                      <table class="animate__animated animate__pulse table table-hover text-nowrap">
                         <thead class="table-success">
                           <tr>
                             <th>Codigo</th>
