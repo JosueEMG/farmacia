@@ -265,7 +265,7 @@ $(document).ready(function(){
         }).then((result) => {
           if (result.value) {
               $.post('../controlador/ProductoController.php',{id,funcion},(response)=>{
-                  edit==false;
+                  edit=false;
                   if(response=='borrado'){
                       swalWithBootstrapButtons.fire(
                           'Borrado!',

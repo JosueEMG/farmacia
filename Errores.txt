@@ -4,3 +4,4 @@ al cambiar la contra, acepta una contra vacia (Arreglado)
 notificacion de cambio de datos. (Arreglado)
 no hay una funcion para el evento click del nombre de usuario en el nav. (Arreglado)
 No hay una funcion para el "Contact" en el header
+la opcion de editar el sexo del formulario de la vista editar_datos_personales, se podia poner cualquier sexo. (Arreglado)

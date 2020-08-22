@@ -165,6 +165,7 @@ if ($_SESSION['us_tipo'] == 1 || $_SESSION['us_tipo'] == 3 || $_SESSION['us_tipo
                                     </strong>
                                     <p id="correo_us" class="text-muted">42515156</p>
                                     <strong style="color:#0B7300">
+                                        
                                         <i class="fas fa-smile-wink mr-1"></i>Sexo
                                     </strong>
                                     <p id="sexo_us" class="text-muted">42515156</p>
@@ -213,7 +214,10 @@ if ($_SESSION['us_tipo'] == 1 || $_SESSION['us_tipo'] == 3 || $_SESSION['us_tipo
                                         <div class="form-group row">
                                             <label for="sexo" class="col-sm-2 col-form-label">Sexo</label>
                                             <div class="col-sm-10">
-                                                <input type="text" id="sexo" class="form-control">
+                                                <select name="sexo" id="sexo" class="form-control select2" style="width:100%">
+                                                <option value="Masculino" >Masculino</option>
+                                                <option value="Femenino">Femenino</option>
+                                                </select>
                                             </div>
                                         </div>
                                         <div class="form-group row">
