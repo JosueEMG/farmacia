@@ -1,7 +1,19 @@
-notificacion de cambio de contraseña, de ascender, descender y de eliminar.
-el producto no se elimina (Arreglado), cuando se elimina, elimina tambien el lote
-al cambiar la contra, acepta una contra vacia (Arreglado)
-notificacion de cambio de datos. (Arreglado)
-no hay una funcion para el evento click del nombre de usuario en el nav. (Arreglado)
-No hay una funcion para el "Contact" en el header
-la opcion de editar el sexo del formulario de la vista editar_datos_personales, se podia poner cualquier sexo. (Arreglado)
+-notificacion de cambio de contraseña y de eliminar.
+
+-notificacion de cambio de ascender, descender. 
+
+-el producto no se elimina (Arreglado), cuando se elimina, elimina tambien el lote
+
+-al cambiar la contra, acepta una contra vacia (Arreglado)
+
+-notificacion de cambio de datos. (Arreglado)
+
+-no hay una funcion para el evento click del nombre de usuario en el nav. (Arreglado)
+
+-No hay una funcion para el "Contact" en el header
+
+-la opcion de editar el sexo del formulario de la vista editar_datos_personales, se podia poner cualquier sexo. (Arreglado)
+
+-en la vista adm_compra.php, el nombre del vendedor siempre es 'USUARIO' y no el vendedor correspondiente (Arreglado)
+
+-Peticion de imagen avatar.png (Arreglado)

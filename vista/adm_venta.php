@@ -110,7 +110,7 @@ if ($_SESSION['us_tipo'] == 3 || $_SESSION['us_tipo'] == 1 || $_SESSION['us_tipo
                                 <div class="icon">
                                     <i class="fas fa-user"></i>
                                 </div>
-                                <a href="adm_mas_consultas.php" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                                <a href="adm_mas_consultas.php" class="small-box-footer">Mas informacion <i class="fas fa-arrow-circle-right"></i></a>
                                 </div>
                             </div>
                             <!-- ./col -->
@@ -125,7 +125,7 @@ if ($_SESSION['us_tipo'] == 3 || $_SESSION['us_tipo'] == 1 || $_SESSION['us_tipo
                                 <div class="icon">
                                     <i class="fas fa-shopping-bag"></i>
                                 </div>
-                                <a href="adm_mas_consultas.php" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                                <a href="adm_mas_consultas.php" class="small-box-footer">Mas informacion <i class="fas fa-arrow-circle-right"></i></a>
                                 </div>
                             </div>
                             <!-- ./col -->
@@ -140,7 +140,7 @@ if ($_SESSION['us_tipo'] == 3 || $_SESSION['us_tipo'] == 1 || $_SESSION['us_tipo
                                 <div class="icon">
                                     <i class="far fa-calendar-alt"></i>
                                 </div>
-                                <a href="adm_mas_consultas.php" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                                <a href="adm_mas_consultas.php" class="small-box-footer">Mas informacion <i class="fas fa-arrow-circle-right"></i></a>
                                 </div>
                             </div>
                             <!-- ./col -->
@@ -155,7 +155,7 @@ if ($_SESSION['us_tipo'] == 3 || $_SESSION['us_tipo'] == 1 || $_SESSION['us_tipo
                                 <div class="icon">
                                     <i class="fas fa-signal"></i>
                                 </div>
-                                <a href="adm_mas_consultas.php" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                                <a href="adm_mas_consultas.php" class="small-box-footer">Mas informacion <i class="fas fa-arrow-circle-right"></i></a>
                                 </div>
                             </div>
                             <!-- ./col -->

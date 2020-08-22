@@ -57,7 +57,11 @@ if ($_SESSION['us_tipo'] == 1 || $_SESSION['us_tipo'] == 3 || $_SESSION['us_tipo
                                 </div>
                                 <div class="form-group row">
                                     <span>Vendedor: </span>
-                                    <h3>usuario</h3>
+                                    <h4>
+                                    <?php
+                                    echo $_SESSION['nombre_us'];
+                                    ?>
+                                    </h4>
                                 </div>
                             </div>
                         </header>
@@ -88,7 +92,7 @@ if ($_SESSION['us_tipo'] == 1 || $_SESSION['us_tipo'] == 3 || $_SESSION['us_tipo
                                         <div class="card-header">
                                             <h3 class="card-title">
                                             <i class="fas fa-dollar-sign"></i>
-                                            Calculo 1
+                                            Calculo del subtotal
                                             </h3>
                                         </div>
                                         <div class="card-body">
@@ -121,7 +125,7 @@ if ($_SESSION['us_tipo'] == 1 || $_SESSION['us_tipo'] == 3 || $_SESSION['us_tipo
                                         <div class="card-header">
                                             <h3 class="card-title">
                                             <i class="fas fa-bullhorn"></i>
-                                            Calculo 2
+                                            Calculo del descuento
                                             </h3>
                                         </div>
                                         <div class="card-body">

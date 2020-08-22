@@ -157,15 +157,10 @@ $(document).ready(function(){
               $('#form-confirmar').trigger('reset');  
             }
             else {
-              /*
               $('#rechazado').hide('slow');
               $('#rechazado').show(1000);
               $('#rechazado').hide(2000);
-              $('#form-confirmar').trigger('reset'); */
-              $('#confirmado').hide('slow');
-              $('#confirmado').show(1000);
-              $('#confirmado').hide(2000);
-              $('#form-confirmar').trigger('reset');  
+              $('#form-confirmar').trigger('reset'); 
             }
             buscar_datos();
         });
