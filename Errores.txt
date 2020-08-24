@@ -17,3 +17,5 @@
 -en la vista adm_compra.php, el nombre del vendedor siempre es 'USUARIO' y no el vendedor correspondiente (Arreglado)
 
 -Peticion de imagen avatar.png (Arreglado)
+
+-No se actualiza al eliminar una venta (Arreglado)

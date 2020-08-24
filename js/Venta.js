@@ -68,7 +68,8 @@ $(document).ready(function(){
                             'Eliminado!',
                             'La venta: '+id+' ha sido eliminada',
                             'success'
-                          )
+                        )
+                        setTimeout('document.location.reload()',800);
                     }
                     else if(response=='nodelete'){
                         swalWithBootstrapButtons.fire(
@@ -78,6 +79,7 @@ $(document).ready(function(){
                           )
                     }
                 })
+                
               
             }else if (result.dismiss === Swal.DismissReason.cancel){
                 swalWithBootstrapButtons.fire(
@@ -87,6 +89,7 @@ $(document).ready(function(){
               )
             }
           })
+          
     })
     $('#tabla_venta tbody').on('click', '.ver', function(){
         let datos = datatable.row($(this).parents()).data();
