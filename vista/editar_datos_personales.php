@@ -217,6 +217,7 @@ if ($_SESSION['us_tipo'] == 1 || $_SESSION['us_tipo'] == 3 || $_SESSION['us_tipo
                                                 <select name="sexo" id="sexo" class="form-control select2" style="width:100%">
                                                 <option value="Masculino" >Masculino</option>
                                                 <option value="Femenino">Femenino</option>
+                                                <option value="Otro">Otro</option>
                                                 </select>
                                             </div>
                                         </div>
