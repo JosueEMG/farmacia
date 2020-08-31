@@ -18,8 +18,9 @@ if(!empty($_SESSION['us_tipo'])){
             break;
     }
 }else{
-    $usuario->loguearse($user, $pass);
-    if(!empty($usuario->objetos)){
+   
+    if(!empty($usuario->loguearse($user, $pass)=="logueado")){
+        $usuario->obtener_datos_logueo($user);
         foreach ($usuario->objetos as $objeto){
             $_SESSION['usuario']=$objeto->id_usuario;
             $_SESSION['us_tipo']=$objeto->us_tipo;
@@ -36,7 +37,8 @@ if(!empty($_SESSION['us_tipo'])){
                 header('Location: ../vista/adm_catalogo.php');
                 break;
         }
-    }else{
+    }
+    else{
         header('location: ../index.php');
     }
 }
